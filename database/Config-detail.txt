@@ -1,0 +1,7 @@
+Config Details
+
+For Frontend
+Twitter_login->config->dbconfig.php
+
+For Backend
+webadmin->config.php
