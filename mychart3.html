@@ -1,0 +1,113 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+
+<meta name="description" content="jqBarGraph is easy-to-use jQuery plugin for displaying your data as bar graphs." />
+<meta name="keywords" content="jquery plugin,graphs,bar graphs,charts,jquery bar graph" />
+
+<script type="text/javascript" src="chartjquery.js"></script>
+<script type="text/javascript" src="jqBarGraph.js"></script>
+<link rel="stylesheet" href="chartstyle.css" type="text/css" />
+
+<title>jqBarGraph: jQuery Bar Graph Plugin</title>
+</head>
+<body> 
+
+<div id="head">
+<h1>jqBarGraph<br />
+<small>graph your data easily</small></h1>
+
+    <!--    -->
+    <!-- -->
+    
+
+<div id="graphHolder5simpleGraph" style="width: 500px; text-align: center;">
+   <h3>Number of visitors per month<br><small>simple bar graph</small></h3>
+   <div id="simpleGraph" style="width: 500px; height: 300px; position: relative; text-align: center;">
+      <div style="position: absolute; left: 0px; width: 78.3333px; margin-left: 5px; bottom: 0px;" id="graphField0simpleGraph" class="graphFieldsimpleGraph">
+         <div id="graphValue0simpleGraph" class="graphValuesimpleGraph">4203</div>
+         <div style="background-color: rgb(18, 42, 71); position: relative; overflow: hidden; display: block; height: 190.46px;" id="graphFieldBar0simpleGraph" class="graphBarsimpleGraph"></div>
+         <div id="graphLabel0simpleGraph" class="graphLabelsimpleGraph">Jan</div>
+      </div>
+      <div style="position: absolute; left: 83.3333px; width: 78.3333px; margin-left: 5px; bottom: 0px;" id="graphField1simpleGraph" class="graphFieldsimpleGraph">
+         <div id="graphValue1simpleGraph" class="graphValuesimpleGraph">5015</div>
+         <div style="background-color: rgb(27, 62, 105); position: relative; overflow: hidden; display: block; height: 227.256px;" id="graphFieldBar1simpleGraph" class="graphBarsimpleGraph"></div>
+         <div id="graphLabel1simpleGraph" class="graphLabelsimpleGraph">Feb</div>
+      </div>
+      <div style="position: absolute; left: 166.667px; width: 78.3333px; margin-left: 5px; bottom: 0px;" id="graphField2simpleGraph" class="graphFieldsimpleGraph">
+         <div id="graphValue2simpleGraph" class="graphValuesimpleGraph">5503</div>
+         <div style="background-color: rgb(18, 42, 71); position: relative; overflow: hidden; display: block; height: 249.369px;" id="graphFieldBar2simpleGraph" class="graphBarsimpleGraph"></div>
+         <div id="graphLabel2simpleGraph" class="graphLabelsimpleGraph">Mar</div>
+      </div>
+      <div style="position: absolute; left: 250px; width: 78.3333px; margin-left: 5px; bottom: 0px;" id="graphField3simpleGraph" class="graphFieldsimpleGraph">
+         <div id="graphValue3simpleGraph" class="graphValuesimpleGraph">4983</div>
+         <div style="background-color: rgb(27, 62, 105); position: relative; overflow: hidden; display: block; height: 225.805px;" id="graphFieldBar3simpleGraph" class="graphBarsimpleGraph"></div>
+         <div id="graphLabel3simpleGraph" class="graphLabelsimpleGraph">Apr</div>
+      </div>
+      <div style="position: absolute; left: 333.333px; width: 78.3333px; margin-left: 5px; bottom: 0px;" id="graphField4simpleGraph" class="graphFieldsimpleGraph">
+         <div id="graphValue4simpleGraph" class="graphValuesimpleGraph">5352</div>
+         <div style="background-color: rgb(18, 42, 71); position: relative; overflow: hidden; display: block; height: 242.527px;" id="graphFieldBar4simpleGraph" class="graphBarsimpleGraph"></div>
+         <div id="graphLabel4simpleGraph" class="graphLabelsimpleGraph">May</div>
+      </div>
+      <div style="position: absolute; left: 416.667px; width: 78.3333px; margin-left: 5px; bottom: 0px;" id="graphField5simpleGraph" class="graphFieldsimpleGraph">
+         <div id="graphValue5simpleGraph" class="graphValuesimpleGraph">5870</div>
+         <div style="background-color: rgb(27, 62, 105); position: relative; overflow: hidden; display: block; height: 266px;" id="graphFieldBar5simpleGraph" class="graphBarsimpleGraph"></div>
+         <div id="graphLabel5simpleGraph" class="graphLabelsimpleGraph">Jun</div>
+      </div>
+   </div>
+</div>
+
+
+  <script>
+graphResolutionByYear = new Array(
+		[[14,54,26],'2007'],
+		[[8,48,38],'2008'],
+		[[4,36,57],'2009']
+	);
+
+stackedByYear = new Array(
+		[[3,6.4,2],'2006'],
+		[[3.4,8,2.9],'2007'],
+		[[4.1,18,2.64],'2008'],
+		[[4.5,22,3.32],'2009']
+	);
+
+graphByMonth = new Array(
+		[4203,'Jan'],
+		[5015,'Feb'],
+		[5503,'Mar'],
+		[4983,'Apr'],
+		[5352,'May'],
+		[5870,'Jun']	
+	);
+
+
+$("#simpleGraph").jqBarGraph({
+	data: graphByMonth,
+	width: 500,
+	colors: ['#122A47','#1B3E69'],
+	color: '#1A2944',
+	barSpace: 5,
+	title: '<h3>Number of visitors per month<br /><small>simple bar graph</small></h3>'
+});
+
+
+
+</script>
+    
+ 
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+    <script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+    <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11860629-1");
+pageTracker._trackPageview();
+} catch(err) {} </script>
+    
+</body>
+</html>

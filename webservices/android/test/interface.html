@@ -1,0 +1,609 @@
+
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<title>Canvas Admin - Interface Elements</title>
+
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />		
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	
+		
+	<link rel="stylesheet" href="stylesheets/all.css" type="text/css" />
+	
+	<!--[if gte IE 9]>
+	<link rel="stylesheet" href="stylesheets/ie9.css" type="text/css" />
+	<![endif]-->
+	
+	<!--[if gte IE 8]>
+	<link rel="stylesheet" href="stylesheets/ie8.css" type="text/css" />
+	<![endif]-->
+	
+	<style>
+	
+	.btn { margin-right: .65em; margin-bottom: .5em; }
+	
+	#loaders .widget-content { text-align: center; }
+	
+	#loaders img {
+		display: inline-block;
+		margin: 1em .5em;
+		vertical-align: middle;
+		
+	}
+	
+	.blockMessage { margin-top: 2em; }
+	
+	#pagination .widget-content { text-align: center; }
+	
+	.pagination { margin-bottom: 0; }
+	
+	#gravity { width: 100%; margin: 5px 0; border-spacing: 2px; }
+	#gravity td { text-align: center; vertical-align: middle; padding: 5px 0; background-color: #EEE; width: 33%; }
+	#gravity a { }
+    #gravity a:hover { color: #505050; background: none; }
+	</style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+	<div id="header">
+		<h1><a href="dashboard.html">Canvas Admin</a></h1>		
+		<a href="javascript:;" id="reveal-nav">
+			<span class="reveal-bar"></span>
+			<span class="reveal-bar"></span>
+			<span class="reveal-bar"></span>
+		</a>
+	</div> <!-- #header -->
+	
+	<div id="search">
+		<form>
+			<input type="text" name="search" placeholder="Search..." id="searchField" />
+		</form>		
+	</div> <!-- #search -->
+	
+	<div id="sidebar">		
+		
+		<ul id="mainNav">			
+			<li id="navDashboard" class="nav">
+				<span class="icon-home"></span>
+				<a href="dashboard.html">Dashboard</a>				
+			</li>
+						
+			<li id="navPages" class="nav">
+				<span class="icon-document-alt-stroke"></span>
+				<a href="javascript:;">Sample Pages</a>				
+				
+				<ul class="subNav">
+					<li><a href="invoice.html">Invoice</a></li>
+					<li><a href="support.html">Support</a></li>
+					<li><a href="people.html">People Directory</a></li>
+					<li><a href="calendar.html">Calendar</a></li>
+					<li><a href="stream.html">Stream</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="reports.html">Reports</a></li>
+				</ul>						
+			</li>	
+			
+			<li id="navForms" class="nav">
+				<span class="icon-article"></span>
+				<a href="javascript:;">Form Elements</a>
+				
+				<ul class="subNav">
+					<li><a href="forms.html">Layouts & Elements</a></li>
+					<li><a href="forms-validations.html">Validations</a></li>					
+				</ul>	
+			</li>
+			
+			<li id="navType" class="nav">
+				<span class="icon-info"></span>
+				<a href="typography.html">Typography</a>	
+			</li>
+			
+			<li id="navGrid" class="nav">
+				<span class="icon-layers"></span>
+				<a href="grids.html">Grid Layout</a>	
+			</li>
+			
+			<li id="navTables" class="nav">
+				<span class="icon-list"></span>
+				<a href="tables.html">Tables</a>	
+			</li>
+			
+			<li id="navButtons" class="nav">
+				<span class="icon-compass"></span>
+				<a href="buttons.html">Buttons & Icons</a>	
+			</li>
+			
+			<li id="navInterface" class="nav active">
+				<span class="icon-equalizer"></span>
+				<a href="interface.html">Interface Elements</a>	
+			</li>
+			
+			<li id="navCharts" class="nav">
+				<span class="icon-chart"></span>
+				<a href="charts.html">Charts & Graphs</a>
+			</li>
+			
+			<li id="navMaps" class="nav">
+				<span class="icon-map-pin-fill"></span>
+				<a href="maps.html">Map Elements</a>
+			</li>
+			
+			<li class="nav">
+				<span class="icon-denied"></span>
+				<a href="javascript:;">Error Pages</a>
+				
+				<ul class="subNav">
+					<li><a href="error-401.html">401 Page</a></li>
+					<li><a href="error-403.html">403 Page</a></li>
+					<li><a href="error-404.html">404 Page</a></li>	
+					<li><a href="error-500.html">500 Page</a></li>	
+					<li><a href="error-503.html">503 Page</a></li>					
+				</ul>	
+			</li>
+		</ul>
+		
+				
+	</div> <!-- #sidebar -->
+	
+	<div id="content">		
+		
+		<div id="contentHeader">
+			<h1>Interface Elements</h1>
+		</div> <!-- #contentHeader -->	
+		
+
+		<div class="container">
+			
+			
+			
+		<div class="grid-12">
+				
+			<div class="widget">
+			
+				<div class="widget-header">
+					<h3 class="icon aperture">Modals & Alerts</h3>
+				</div> <!-- .widget-header -->
+				
+				<div class="widget-content">
+					
+					<button id="exampleModal" class="btn btn-tertiary">Modal Window</button>
+					<button id="exampleAlert" class="btn btn-tertiary">Alert Modal</button>
+					
+				</div> <!-- .widget-content -->
+				
+			</div> <!-- .widget -->	
+				
+			<div class="widget">
+			
+				<div class="widget-header">
+					<h3 class="icon aperture">Tooltips</h3>
+				</div> <!-- .widget-header -->
+				
+				<div class="widget-content">
+					<table id="gravity">
+					  <tbody><tr>
+					    <td>
+					      <a id="north-west" href="#" title="This is an example of north-west gravity">Northwest</a>
+					    </td>
+					    <td>
+					      <a id="north" href="#" title="This is an example of north gravity">North</a>
+					    </td>
+					    <td>
+					      <a id="north-east" href="#" title="This is an example of north-east gravity">Northeast</a>
+					    </td>
+					  </tr>
+					  <tr>
+					    <td>
+					      <a id="west" href="#" title="This is an example of west gravity">West</a>
+					    </td>
+					    <td>&nbsp;</td>
+					    <td>
+					      <a id="east" href="#" title="This is an example of east gravity">East</a>
+					    </td>
+					  </tr>
+					  <tr>
+					    <td>
+					      <a id="south-west" href="#" title="This is an example of south-west gravity">Southwest</a>
+					    </td>
+					    <td>
+					      <a id="south" href="#" title="This is an example of south gravity">South</a>
+					    </td>
+					    <td>
+					      <a id="south-east" href="#" title="This is an example of south-east gravity">Southeast</a>
+					    </td>
+					  </tr>
+					</tbody></table>
+				</div> <!-- .widget-content -->
+				
+			</div> <!-- .widget -->	
+			
+			<div class="widget widget-tabs">
+			
+					<div class="widget-header">
+						<h3 class="icon aperture">Tabs</h3>
+							
+						<ul class="tabs right">	
+							<li class="active"><a href="#tab-1">Tab #1</a></li>	
+							<li class=""><a href="#tab-2">Tab #2</a></li>					
+							<li class=""><a href="#tab-3">Tab #3</a></li>
+						</ul>					
+					</div> <!-- .widget-header -->
+				
+					<div id="tab-1" class="widget-content">
+						
+						<h4>Tab #1 Content</h4>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+					</div> <!-- .widget-content -->
+				
+					<div id="tab-2" class="widget-content">
+						
+						<h4>Tab #2 Content</h4>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+					</div> <!-- .widget-content -->
+					
+					<div id="tab-3" class="widget-content">
+						
+						<h4>Tab #3 Content</h4>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+					</div> <!-- .widget-content -->
+				
+			</div> <!-- .widget -->
+				
+			<div class="widget">
+			
+				<div class="widget-header">
+					<h3 class="icon aperture">Progress Bars</h3>
+				</div> <!-- .widget-header -->
+				
+				<div class="widget-content">
+					
+					<h4>Regular</h4>
+					
+					<div class="progress-bar primary">
+							<div class="bar" style="width: 65%;">65%</div>
+					</div>
+										
+					<div class="progress-bar secondary">
+						<div class="bar" style="width: 58%;">58%</div>
+					</div>
+					
+					<h4>Thin</h4>
+					
+					<div class="progress-bar primary thin">
+						<div class="bar" style="width: 75%;">75%</div>
+					</div>
+					
+					<div class="progress-bar secondary thin">
+						<div class="bar" style="width: 37%;">37%</div>
+					</div>
+				</div> <!-- .widget-content -->
+				
+			</div> <!-- .widget -->	
+				
+		</div> <!-- .grid -->
+		
+		
+		
+		
+		<div class="grid-12">
+				
+			
+				
+			
+			
+				
+			
+			
+			<div class="widget">
+			
+				<div class="widget-header">
+					<h3 class="">Notify Messages</h3>
+				</div> <!-- .widget-header -->
+				
+				<div class="widget-content">
+					
+					<div class="notify">
+					
+					<a href="javascript:;" class="close">&times;</a>
+					
+					<h3>Default Notifty</h3>
+					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+					</div> <!-- .notify -->
+					
+					<div class="notify notify-success">
+						
+						<a href="javascript:;" class="close">&times;</a>
+						
+						<h3>Success Notifty</h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+					</div> <!-- .notify -->
+					
+					<div class="notify notify-warning">
+						
+						<a href="javascript:;" class="close">&times;</a>
+						
+						<h3>Warning Notifty</h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+					</div> <!-- .notify -->
+					
+					<div class="notify notify-error">
+						
+						<a href="javascript:;" class="close">&times;</a>
+						
+						<h3>Error Notifty</h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+					</div> <!-- .notify -->
+					
+					<div class="notify notify-info">
+						
+						<a href="javascript:;" class="close">&times;</a>
+						
+						<h3>Information Notifty</h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</p>
+					</div> <!-- .notify -->
+					
+				</div> <!-- .widget-content -->
+				
+			</div> <!-- .widget -->	
+			
+			
+			
+			<div id="loaders" class="widget">
+			
+				<div class="widget-header">
+					<h3 class="icon aperture">Ajax Loaders</h3>
+				</div> <!-- .widget-header -->
+				
+				<div class="widget-content">
+					
+					<img src="images/loaders/circle.gif" alt="Loader" />
+					<img src="images/loaders/facebook.gif" alt="Loader" />
+					<img src="images/loaders/roller.gif" alt="Loader" />
+					<img src="images/loaders/snake.gif" alt="Loader" />
+					<img src="images/loaders/indicator.gif" alt="Loader" />
+					<img src="images/loaders/indicator-lite.gif" alt="Loader" />
+					<img src="images/loaders/indicator-big.gif" alt="Loader" />
+					<img src="images/loaders/wheel-throbber.gif" alt="Loader" />
+					<img src="images/loaders/big-roller.gif" alt="Loader" />
+					<img src="images/loaders/squares-circle.gif" alt="Loader" />
+					<img src="images/loaders/squares.gif" alt="Loader" />
+					
+				</div> <!-- .widget-content -->
+				
+			</div> <!-- .widget -->	
+				
+			<div id="pagination" class="widget">
+			
+				<div class="widget-header">
+					<h3 class="icon aperture">Pagination</h3>
+				</div> <!-- .widget-header -->
+				
+				<div class="widget-content">
+					
+					<div class="pagination">
+		
+						<a href="javascript:;" class="prev disabled">« Previous</a>
+						<a href="javascript:;" class="selected">1</a>
+						<a href="javascript:;">2</a>
+						<a href="javascript:;">3</a>
+						<a href="javascript:;">...</a>
+						<a href="javascript:;">20</a>
+						<a href="javascript:;">21</a>
+						<a href="javascript:;">22</a>
+						<a href="javascript:;" class="next">Next »</a>
+		
+					</div>
+					
+					
+				</div> <!-- .widget-content -->
+				
+			</div> <!-- .widget -->	
+				
+		</div> <!-- .grid -->
+				
+			
+			
+			
+			
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+			
+		</div> <!-- .container -->
+		
+	</div> <!-- #content -->
+	
+	<div id="topNav">
+		 <ul>
+		 	<li>
+		 		<a href="#menuProfile" class="menu">John Doe</a>
+		 		
+		 		<div id="menuProfile" class="menu-container menu-dropdown">
+					<div class="menu-content">
+						<ul class="">
+							<li><a href="javascript:;">Edit Profile</a></li>
+							<li><a href="javascript:;">Edit Settings</a></li>
+							<li><a href="javascript:;">Suspend Account</a></li>
+						</ul>
+					</div>
+				</div>
+	 		</li>
+		 	<li><a href="javascript:;">Upgrade</a></li>
+		 	<li><a href="index-2.html">Logout</a></li>
+		 </ul>
+	</div> <!-- #topNav -->
+	
+	<div id="quickNav">
+		<ul>
+			<li class="quickNavMail">
+				<a href="#menuAmpersand" class="menu"><span class="icon-book"></span></a>		
+				
+						
+
+				<div id="menuAmpersand" class="menu-container quickNavConfirm">
+					<div class="menu-content cf">							
+						
+						<div class="qnc qnc_confirm">
+							
+							<h3>Confirm</h3>
+					
+							<div class="qnc_item">
+								<div class="qnc_content">
+									<span class="qnc_title">Confirm #1</span>
+									<span class="qnc_preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</span>
+									<span class="qnc_time">3 hours ago</span>
+								</div> <!-- .qnc_content -->
+								
+								<div class="qnc_actions">						
+									<button class="btn btn-primary btn-small">Accept</button>
+									<button class="btn btn-quaternary btn-small">Not Now</button>
+								</div>
+							</div>
+							
+							<div class="qnc_item">
+								<div class="qnc_content">
+									<span class="qnc_title">Confirm #2</span>
+									<span class="qnc_preview">Duis aute irure dolor in henderit in voluptate velit esse cillum dolore.</span>
+									<span class="qnc_time">3 hours ago</span>
+								</div> <!-- .qnc_content -->
+								
+								<div class="qnc_actions">						
+									<button class="btn btn-primary btn-small">Accept</button>
+									<button class="btn btn-quaternary btn-small">Not Now</button>
+								</div>
+							</div>
+							
+							<div class="qnc_item">
+								<div class="qnc_content">
+									<span class="qnc_title">Confirm #3</span>
+									<span class="qnc_preview">Duis aute irure dolor in henderit in voluptate velit esse cillum dolore.</span>
+									<span class="qnc_time">3 hours ago</span>
+								</div> <!-- .qnc_content -->
+								
+								<div class="qnc_actions">						
+									<button class="btn btn-primary btn-small">Accept</button>
+									<button class="btn btn-quaternary btn-small">Not Now</button>
+								</div>
+							</div>
+							
+							<a href="javascript:;" class="qnc_more">View all Confirmations</a>
+															
+						</div> <!-- .qnc -->	
+					</div>
+				</div>
+			</li>
+			<li class="quickNavNotification">
+				<a href="#menuPie" class="menu"><span class="icon-chat"></span></a>
+				
+				<div id="menuPie" class="menu-container">
+					<div class="menu-content cf">					
+						
+						<div class="qnc">
+							
+							<h3>Notifications</h3>
+					
+							<a href="javascript:;" class="qnc_item">
+								<div class="qnc_content">
+									<span class="qnc_title">Notification #1</span>
+									<span class="qnc_preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</span>
+									<span class="qnc_time">3 hours ago</span>
+								</div> <!-- .qnc_content -->
+							</a>
+							
+							<a href="javascript:;" class="qnc_item">
+								<div class="qnc_content">
+									<span class="qnc_title">Notification #2</span>
+									<span class="qnc_preview">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</span>
+									<span class="qnc_time">3 hours ago</span>
+								</div> <!-- .qnc_content -->
+							</a>
+							
+							<a href="javascript:;" class="qnc_more">View all Confirmations</a>
+							
+						</div> <!-- .qnc -->
+					</div>
+				</div>				
+			</li>
+		</ul>		
+	</div> <!-- .quickNav -->
+	
+	
+</div> <!-- #wrapper -->
+
+<div id="footer">
+	Copyright &copy; 2012, MadeByAmp Themes.
+</div>
+
+
+<script src="javascripts/all.js"></script>
+
+<script>
+
+$(function () {
+	$('#exampleModal').live ('click', function (e) {
+		e.preventDefault ();
+
+		$.modal ({ 
+			title: 'Modal'
+			, ajax: 'modal.php'
+		});	
+	});
+	
+	$('#exampleAlert').live ('click', function (e) {
+		e.preventDefault ();
+		$.alert ({ 
+			type: 'confirm'
+			, title: 'Alert'
+			, text: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do dolor sit amet, consectetur adipisicing elit, sed do.</p>'
+			, callback: function () { alert ('Callback'); }	
+		});		
+	});
+	
+	$('#north').tipsy({gravity: 'n'});
+    $('#south').tipsy({gravity: 's'});
+    $('#east').tipsy({gravity: 'e'});
+    $('#west').tipsy({gravity: 'w'});
+    $('#north-west').tipsy({gravity: 'nw'});
+    $('#north-east').tipsy({gravity: 'ne'});
+    $('#south-west').tipsy({gravity: 'sw'});
+    $('#south-east').tipsy({gravity: 'se'});
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+<script src="js/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(function() {
+ 
+//set up hash detection
+$(window).bind( 'hashchange', function(e) {
+ var hash = '';
+ var hashlenght = 0;
+ hashwith = '';
+ if (location.hash == ''){
+ location.hash = '#pages=index';
+ document.title = 'Work Index';
+ }
+ 
+ hash = location.hash;
+ hashlenght = hash.length;
+ hashwith = '#'+hash.substring(7, hashlenght);
+ hash = location.hash.substring(7, hashlenght);
+ if(hashwith != "#"+'index'){
+ show_overlay(hash);
+ document.title = 'Work '+hash;
+ }
+ else{
+ close_overlay();
+  
+ }
+  
+ });
+ 
+ $(window).trigger( 'hashchange' );
+ 
+ $(".overlays .item img").each(function(){
+ $(this).click(function(){
+ close_overlay();
+ });
+ });
+ 
+});
+ 
+function close_overlay(){
+ $(".overlays .item").each(function(){
+ if($(this).css('display') == 'block'){$(this).hide();}
+ });
+ location.hash = '#pages=index';
+}
+ 
+//function to show overlay
+function show_overlay(aux){
+ $("#"+aux).show();
+}
+ 
+//function to change hash
+function change_hash(aux){
+ location.hash = '#pages='+aux;
+ document.title = 'Work '+aux;
+}
+ 
+ //set up hash detection
+$(window).bind( 'hashchange', function(e) {
+ var hash = '';
+ var hashlenght = 0;
+ hashwith = '';
+ if (location.hash == ''){
+ location.hash = '#pages=index';
+ document.title = 'Work Index';
+ }
+  
+ hash = location.hash;
+ hashlenght = hash.length;
+ hashwith = '#'+hash.substring(7, hashlenght);
+ hash = location.hash.substring(7, hashlenght);
+ if(hashwith != "#"+'index'){
+ show_overlay(hash);
+ document.title = 'Work '+hash;
+ }
+ else{
+ close_overlay();
+  
+ }
+  
+ });
+ 
+ $(window).trigger( 'hashchange' );
+ $(".overlays .item img").each(function(){
+ $(this).click(function(){
+ close_overlay();
+ });
+});
+function close_overlay(){
+ $(".overlays .item").each(function(){
+ if($(this).css('display') == 'block'){$(this).hide();}
+ });
+ location.hash = '#pages=index';
+}
+//function to show overlay
+function show_overlay(aux){
+ $("#"+aux).show();
+}
+//function to change hash
+function change_hash(aux){
+ location.hash = '#pages='+aux;
+ document.title = 'Work '+aux;
+}
+</script>
+</head>
+<body>
+ 
+ <div style="width: 500px; margin: 0pt auto;">
+ <div>
+ <h1>click on an image</h1>
+ </div>
+ <div id="demos" class="content">
+ <div class="pics" id="slideshow">
+ 
+ <a href="#overlay01" onclick="change_hash('overlay01'); return false; " ><img  alt="" src="logo001.png" /></a>
+ <a href="#overlay02" onclick="change_hash('overlay02'); return false; " ><img  alt="" src="logo002.png" /></a>
+ <a href="#overlay03" onclick="change_hash('overlay03'); return false; " ><img  alt="" src="logo003.png" /></a>
+ </div>
+ 
+ </div>
+ </div>
+ 
+<div class="overlays" style="width: 500px; margin: 0pt auto;">
+ <div class="item" id="overlay01" >
+ <img alt="" src="logo001.png" />
+ <p class="text">
+ click in the image to close overlay
+ </p>
+ </div>
+ <div class="item" id="overlay02" >
+ 
+ <img alt="" src="logo002.png" />
+ <p class="text">
+ click in the image to close overlay
+ </p>
+ </div>
+ <div class="item" id="overlay03" >
+ <img alt="" src="logo003.png" />
+ <p class="text">
+ click in the image to close overlay
+ </p>
+ </div>
+  
+</div>
+</body>
+</html>
+
+ 	

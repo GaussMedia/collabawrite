@@ -1,0 +1,133 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Unpublished Draft</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<!----------------------- main css and js --------------!---->
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-----------------------/ main css and js --------------!---->
+<link rel="stylesheet" type="text/css" href="css/jquery.pageslide.css" />
+
+</head>
+
+<body>
+<div class="row-fluid" id="content">
+
+  <div class="logo_drop_down"> <a class="dropdown-toggle logo" data-toggle="dropdown" href="index.html"><img src="img/logo.png" alt=""/></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="stats.html">Stats</a></li>
+      <li><a href="drafts.html">Drafts</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+  
+  <div class="pepl text-center relative margin50">
+    <div class="custom_padding">
+    <div class="profile img-polaroid margin50 pull-right"> <img src="img/profile_bg.jpg" alt=""/> </div>
+    <div class="clearfix"></div>
+    <div class="row-fluid text-right font_zise13">
+      <h4 class="margin30">Matt Gallivan</h4>
+
+      <p>Founder, <a href="#"> <u> http://t.co/evrJOImj</u></a> (Help a poor)</p>
+      
+      <hr/>
+      
+      <p><strong>Draft</strong> <br/> May 13, 2013</p>
+      
+    </div>
+    <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+  <div class="wrapper margin50">
+    <div class="wrapper_inner">
+      <div class="row-fluid  margin20">
+        <div class="span10">
+          <h2 class="zero_margin">I.M.H.O</h2>
+          <small class="light_grey">ghrthytg</small> </div>
+        <div class="clearfix"></div>
+        <p class="margin20 relative">Contrary to popular belief.<span><a href="#modal" class="second comment">+</a></span> </p>
+        
+        
+      </div>
+      
+    </div>
+    
+    
+  </div>
+  
+  <div class="btns_right_box">
+    <h4 class="pull-left" style="margin:10px 0 0 80px;">Unpublished Draft <span class="light_grey font_zise13 font_weight">(Updated 2 hrs ago)</span></h4>
+
+    	<div class="pull-right">
+        <a href="#" class="btn pull-right margin_left5">Edit</a> &nbsp;
+    	<a href="#" class="btn pull-right margin_left5">Delete</a> &nbsp;
+        <a href="#myModal" role="button" class="btn pull-right" data-toggle="modal">Invite Collaborators</a>
+         &nbsp;
+
+    </div>
+    </div>
+  
+</div>
+
+
+
+<div id="modal">
+	
+    <div class="row-fluid">
+    <div class="span2">
+    <div class="span12 img-polaroid margin10 pull-left pading2"><img src="img/profile_bg.jpg" alt=""/></div>			    </div>
+    <div class="span10">
+     <h4 class="font14">User name</h4>
+     <input type="text" class="input_custom zero_margin" placeholder="Leave a note">
+     <a href="#" class="font_zise13">Save</a> &nbsp; <a href="javascript:$.pageslide.close()" class="font_zise13">Cancel</a>
+     <hr/>
+     <p class="font_zise13 light_grey">This note is only visible to you and the author, unless the author chooses to make it public.</p>
+    </div>
+    
+    </div>
+  
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Invite Collaborators</h4>
+  </div>
+  <div class="modal-body text-center">
+    <p>Get feedback on your post before publishing it by sharing the following link. Anyone with this link will be able to view your unpublished draft and leave notes for you to review. If they leave a note, you'll also have the chance to thank them on your published post.</p>
+    <input type="text" placeholder="https://medium.com/i-m-h-o/ea32ae6516b5?kme=collabEmail.clicked&km_postIds=ea32ae6516b5" class="span5">
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<script src="js/jquery.pageslide.min.js"></script> 
+<script>
+        /* Default pageslide, moves to the right */
+        $(".first").pageslide();
+        
+        /* Slide to the left, and make it model (you'll have to call $.pageslide.close() to close) */
+        $(".second").pageslide({ direction: "left", modal: true });
+		
+		$('.comment').click(function(){
+			$(this).addClass('showcomment');
+		})
+		
+    </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+<table cellpadding="10" style="border-color: #666;"><tbody><tr style="background: #fddea7;"><td><font color="#990000"><strong> Hello tester,</strong></font><br><br>Thank you for registering at Electronic Tme Crew. Your account is created and must be activated before you can use it.<br>
+		To activate the account click on the following link :<br><a target="_blank" href="link hehe"> Click Here </a><br>Thank you,<br> Electronic.Com</td></tr></tbody></table>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Create Collection</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<!----------------------- main css and js --------------!---->
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-----------------------/ main css and js --------------!---->
+
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<style>
+/* container of the file upload elements and look of the field */
+.file {
+	display: inline-block;
+	width:105px;
+	position: relative;
+	top:50%;
+}
+/* style text of the upload field and add an attachment icon */
+.file .button {
+	background:url(img/add_img.png) no-repeat 97% 50%;
+	text-indent:10px;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	color:#555;
+	height:85px;
+	line-height:40px;
+	display: block;
+}
+/* hide the real file upload input field */
+.file input {
+	cursor: pointer;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	filter: alpha(opacity=1);
+	-moz-opacity: 0.01;
+	opacity: 0.01;
+	font-size: 100px;
+}
+</style>
+<script type="text/javascript">
+/* function to display file name when selected */
+$.fn.fileName = function() {
+	var $this = $(this),
+	$val = $this.val(),
+	valArray = $val.split('\\'),
+	newVal = valArray[valArray.length-1],
+	$button = $this.siblings('.button');
+	if(newVal !== '') {
+		$button.text(newVal);
+  	}
+};
+
+$().ready(function() {
+    //alert('alert here');
+	/* on change, focus or click call function fileName */
+	$('input[type=file]').bind('change focus click', function() {$(this).fileName()});
+});
+</script>
+</head>
+
+<body>
+<div class="row-fluid">
+  <div class="logo_drop_down"> <a class="dropdown-toggle logo" data-toggle="dropdown" href="index.html"><img src="img/logo.png" alt=""/></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Sign in with twitter</a></li>
+    </ul>
+  </div>
+  <div class="pepl font_white grey_bg">
+    <div class="content margin50 top30">
+      <div class="row-fluid text-center">
+        <div class="file">
+          <input type="file" id="fileUpload" name="fileUpload" />
+          <span class="button"></span> </div>
+      </div>
+      <input type="text" class="input_custom margin30 margin_botm_zero font18 font_white" placeholder="Name your collection here">
+      <input type="text" class="input_custom font_white font14" placeholder="Discribe your collection here">
+      <small class="light_grey"><em>By User name</em></small>
+      <hr/>
+      <input type="button" class="btn btn-success" value="Create">
+      <input type="button" class="btn btn-success" value="Cancel">
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="wrapper_inner">
+      <div class="row-fluid">
+        <hr/>
+        <h2> Who can Contribute ?</h2>
+        <hr/>
+        <div class="row-fluid margin20">
+          <div class="well img-polaroid span6 text-center height200 box_position">
+            <div class="box aligncenter">
+              <div class="aligncenter icon"> <i class="icon-group icon-circled icon-64 active"></i> </div>
+              <div class="text">
+                <h6>Anyone</h6>
+                <p>Anyone can add to this collection and you'll have the ability to remove any content</p>
+              </div>
+            </div>
+            <div class="select_option"><span class="icon-ok"></span></div>
+          </div>
+          <div class="well img-polaroid span6 text-center height200 box_position">
+            <div class="box aligncenter">
+              <div class="aligncenter icon"> <i class="icon-user icon-circled icon-64 active"></i> </div>
+              <div class="text">
+                <h6>Invite only</h6>
+                <p>Only you this collection.(You can invite people from the collection's setting once it's created.)</p>
+              </div>
+            </div>
+            <div class="select_option"><span class="icon-ok"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>$('#example').tooltip(options)</script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Write Report</title>
+
+<!----------------------- main css and js --------------!---->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+
+<link href="css/inettuts.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-----------------------/ main css and js --------------!---->
+
+<script>
+  
+   jQuery(document).on('click','.link_click',function(){
+       //alert('hi');
+       jQuery('.text_hide').hide();
+        jQuery(".link").show();
+  });
+  jQuery(document).on('click','.close',function(){
+      jQuery('.link').hide();
+        jQuery(".text_hide").show();
+  });
+
+    </script>
+
+<style>
+/* container of the file upload elements and look of the field */
+.file {
+	display: inline-block;
+	width:100%;
+	position: relative;
+	top:50%;
+}
+/* style text of the upload field and add an attachment icon */
+.file .button {
+	background:url(img/add_img.png) no-repeat center;
+	text-indent:10px;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	color:#555;
+	height:85px;
+	line-height:40px;
+	display: block;
+}
+/* hide the real file upload input field */
+.file input {
+	cursor: pointer;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	filter: alpha(opacity=1);
+	-moz-opacity: 0.01;
+	opacity: 0.01;
+	font-size: 100px;
+}
+</style>
+<script type="text/javascript">
+/* function to display file name when selected */
+$.fn.fileName = function() {
+	var $this = $(this),
+	$val = $this.val(),
+	valArray = $val.split('\\'),
+	newVal = valArray[valArray.length-1],
+	$button = $this.siblings('.button');
+	if(newVal !== '') {
+		$button.text(newVal);
+  	}
+};
+
+$().ready(function() {
+	/* on change, focus or click call function fileName */
+	//$('input[type=file]').bind('change focus click', function() {$(this).fileName()});
+});
+</script>
+
+<link rel="stylesheet" href="css/alertify.core.css" />
+<link rel="stylesheet" href="css/alertify.default.css" id="toggleCSS" />
+<script src="js/alertify.min.js"></script>
+
+</head>
+
+<body>
+	
+<div class="row-fluid">
+
+    <div class="logo_drop_down">
+    
+	<a class="dropdown-toggle logo" data-toggle="dropdown" href="#"><img src="img/logo.png" alt=""/></a>
+
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+      <li><a href="index.html"><i class="icon-white">&nbsp;</i> Home</a></li>
+      <li><a href="stats.html"><i class="user_icon"><img src="img/blog_user.png" alt=""/></i> User name</a></li>
+      <li><a href="stats.html"><i class="icon-white icon-signal"></i> Stats</a></li>
+      <li><a href="drafts.html"><i class="icon-white icon-list-alt"></i> Drafts</a></li>
+      <li><a href="settings.html"><i class="icon-white icon-wrench"></i> Settings</a></li>
+      <li><a href="#"><i class="icon-white icon-off"></i> Logout</a></li>
+    </ul>
+    
+    </div>
+
+    <div class="btns_right_box position_fixed">
+    <h4 class="pull-left light_grey" style="margin:10px 0 0 80px;">Contributing</h4>
+    	<div class="pull-right btn_box">
+        <a  href="#" role="button" id="bootstrap" class="btn btn-success pull-right custom_margin" data-toggle="modal">Publish</a>
+          <input type="button" class="btn pull-right custom_margin" value="Save draft">
+          <input type="button" class="btn pull-right custom_margin" value="Cancel">
+        <!--<small class="custom_margin pull-right">Draft saved</small>-->
+    </div>
+    </div>
+    
+    <div class="wrapper left_zero margin50">
+        
+   	<div class="width100">
+	
+    <div class="well well-small text-center img_small zero_padding margin50" id="profile">
+    <a href="#" class="btn btn-large" id="remove"><i class="icon-remove"></i>Remove</a>
+    <a href="#" class="btn btn-large" id="img_upload"><i class="icon-resize-full"></i> Full Width</a>
+    <a href="#" class="btn btn-large" id="img_upload_large"><i class="icon-white icon-resize-small"></i> Fit to text</a>
+    <img src="img/post.jpg" alt=""/>
+  	 <!--<div class="file">
+		<input type="file" id="fileUpload" name="fileUpload" />
+		<span class="button">Add optional feature image</span>
+	</div>-->
+    
+    <div class="clearfix"></div>
+    </div>
+    
+    <div class="zero_auto span6">
+    <h4><a href="#">My cOlLeCtIoN</a></h4>
+        
+    <p contenteditable="true" class="font50 margin_botm_zero">Type your title</p>
+    <p contenteditable="true" class="margin10 margin_botm_zero font18">Type your subtitle (optional)</p>
+    <p contenteditable="true" class="margin10 margin_botm_zero font14">Type your postType your posType your posType your posType yr postType your posType your posType your postType your posType your posType your postType your posType your posType your postType your posType your posType your postType your posType your posType your postType your posType your posType your postType your posType your posType your postType your posType your posType youour posType your pos</p>
+    
+    <div class="browse_box">
+    
+    	<div class="file">
+			<input type="file" id="fileUpload" name="fileUpload" />
+			<span class="button">Add image</span>
+		</div>
+    
+    </div>
+    
+    <div id="columns">
+        
+        <div id="column2" class="column">
+           <div class="widget">  
+               <div class="widget-head">
+                     <div class="img_show"> 
+                     <img src="img/yo.png">
+                    <div class="img_hover_box">
+                    	<span>(drag image)</span>
+                        <div class="icon-remove icon-white"></div>
+                    </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <div id="column3" class="column"> </div>
+        <div id="column4" class="column"> </div>
+       
+        
+        
+    </div>
+        
+            </div>
+            
+	<div class="clearfix"></div>	
+    </div>
+
+
+    </div>
+    
+    
+    
+    </div>
+    
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h4 id="myModalLabel" class="text-center">Uh oh!</h4>
+</div>
+<div class="modal-body">
+<p>You haven't written anything yet, so there is nothing to post!</p>
+</div>
+<div class="modal-footer">
+<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+</div>
+</div>		
+
+    
+    
+<script>
+		"use strict";
+		var
+		$ = function (id) {
+			return document.getElementById(id);
+		},
+		reset = function () {
+			$("toggleCSS").href = "css/alertify.default.css";
+			alertify.set({
+				labels : {
+					ok     : "OK",
+					//cancel : "Cancel"
+				},
+				delay : 5000,
+				buttonReverse : false,
+				buttonFocus   : "ok"
+			});
+		};
+
+
+		// ==============================
+		// Custom Themes
+		$("bootstrap").onclick = function () {
+			reset();
+			$("toggleCSS").href = "css/alertify.bootstrap.css";
+			alertify.confirm("You haven't written anything yet, so there is nothing to post!", function (e) {
+				if (e) {
+					alertify.success("You are successfully posted your post");
+				} else {
+					alertify.error("You've clicked Cancel");
+				}
+			});
+			return false;
+		};
+	</script>
+    
+<script>
+
+	jQuery(document).ready(function(){
+			jQuery("#img_upload").click(function(){
+			jQuery(".img_small").removeClass("img_small, margin50").addClass("img_large");
+				jQuery("#img_upload").hide();
+				jQuery("#img_upload_large").show();
+				});
+			jQuery("#img_upload_large").click(function(){
+			jQuery(".img_small").removeClass("img_large").addClass("img_small, margin50");
+				jQuery("#img_upload_large").hide();
+				jQuery("#img_upload").show();
+				})
+		});
+
+</script>
+
+
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-personalized-1.6rc2.min.js"></script>
+<script type="text/javascript" src="js/inettuts.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script>
+
+function onFileLoad(e) { 
+    $('#preview').append('<img src="'+e.target.result +'"/>');  
+}
+
+function displayPreview(files) {
+    var reader = new FileReader();
+    reader.onload = onFileLoad;
+    reader.readAsDataURL(files[0]);
+}
+</script>
+</head>
+<body>
+<span id="preview"></span>
+<input type="file" onchange="displayPreview(this.files);"/>
+</body>
+</html>

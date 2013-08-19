@@ -1,0 +1,52 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} !^/post_collection.php
+RewriteCond %{REQUEST_URI} !^/fetch-collec.php
+RewriteCond %{REQUEST_URI} !^/fetch-collaborate.php
+RewriteCond %{REQUEST_URI} !^/collection.php
+RewriteCond %{REQUEST_URI} !^/edit_post_collection.php
+RewriteCond %{REQUEST_URI} !^/delete_note.php
+RewriteCond %{REQUEST_URI} !^/delete-collection.php
+RewriteCond %{REQUEST_URI} !^/update_note.php
+RewriteCond %{REQUEST_URI} !^/getData.php
+RewriteCond %{REQUEST_URI} !^/rvr.php
+RewriteCond %{REQUEST_URI} !^/perticularrvr.php
+RewriteCond %{REQUEST_URI} !^/perticularview.php
+RewriteCond %{REQUEST_URI} !^/getuserrecs.php
+RewriteCond %{REQUEST_URI} !^/share-post.php
+RewriteCond %{REQUEST_URI} !^/getdataviews.php
+RewriteCond %{REQUEST_URI} !^/getdataviews1.php
+RewriteCond %{REQUEST_URI} !^/getdataviewsperticular.php
+RewriteCond %{REQUEST_URI} !^/update-collection.php
+RewriteCond %{REQUEST_URI} !^/fetch-invitees.php
+RewriteCond %{REQUEST_URI} !^/remove-invitee.php
+RewriteCond %{REQUEST_URI} !^/change-email.php
+RewriteCond %{REQUEST_URI} !^/change-location.php
+RewriteCond %{REQUEST_URI} !^/commentuser.php
+RewriteCond %{REQUEST_URI} !^/read-next.php
+RewriteCond %{REQUEST_URI} !^/readmouseout.php
+RewriteCond %{REQUEST_URI} !^/post-link.php
+RewriteCond %{REQUEST_URI} !^/crosspost.php
+RewriteCond %{REQUEST_URI} !^/readonhover.php
+RewriteCond %{REQUEST_URI} !^/resend-link.php
+RewriteCond %{REQUEST_URI} !^/post_upload.php
+RewriteCond %{REQUEST_URI} !^/image-update.php
+RewriteCond %{REQUEST_URI} !^/image-delete.php
+RewriteCond %{REQUEST_URI} !^/delete_draft.php
+RewriteCond %{REQUEST_URI} !^/cancel_draft.php
+RewriteCond %{REQUEST_URI} !^/publish-draft.php
+RewriteCond %{REQUEST_URI} !^/edit_draft.php
+RewriteCond %{REQUEST_URI} !^/write-post.php
+RewriteCond %{REQUEST_URI} !^/webadmin/editorpick.php
+RewriteCond %{REQUEST_URI} !^/webadmin/Status_Selected.php
+#RewriteCond %{REQUEST_URI} !^/webservices/iphone
+
+#RewriteCond %{REQUEST_URI} !^/webservices/iphone/index.php
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R,L,NC]
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.*?)/?$ $1.php [L,NC]
+ErrorDocument 404 /error404.php

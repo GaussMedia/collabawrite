@@ -1,0 +1,38 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js" ></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script>
+            $(function () {
+    $('#container').highcharts({
+        chart: {
+                type: 'column'
+            },
+        xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+                day: '%e of %b'
+            }
+        },
+
+        series: [{
+            name : 'Views',
+            data: [11, 71, 11, 22, 11, 112, 131, 141, 112, 194, 95, 54],
+            pointStart: Date.UTC(2013, 6, 1),
+            pointInterval: (24 * 3600 * 1000 ) + (24 * 3600 * 1000) + (24 * 3600 * 1000) + (24 * 3600 * 1000)   // one weak
+        }]
+    });
+});
+        </script>
+    </head>
+    <body>
+<div id="container" style="height: 400px; width: 500px"></div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        
+        <script>
+            // Clone Series To Redraw
+var seriesClone=[{
+            name: 'USD to EUR',
+	        data: [1,2,3,4,4,5,6,7,7,8,8,8,9,10,14]
+  }]
+
+// Series Options To SET
+var chartOptions={   
+        
+        chart: {
+            renderTo:'container',
+	        zoomType: 'xy'
+	    },
+	    
+	    rangeSelector: {
+	    	selected: 1
+	    },
+	    
+	    series: [{
+	        name: 'USD to EUR',
+	        data: [1,2,3,4,4,5,6,7,7,8,8,8,9,10,14]
+	    }]
+                     }
+
+
+
+
+$(function() {
+	
+    var myChart=new Highcharts.StockChart(chartOptions);
+ 
+    $("#CZ").click(function(){
+       chartOptions.chart.zoomType='y';
+       chartOptions.series=seriesClone;
+       myChart=new Highcharts.StockChart(chartOptions); 
+      })   
+    
+	    
+});
+            </script>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+<div id="container" style="height: 400px; min-width: 600px"></div>
+<script src="http://code.highcharts.com/stock/highstock.js"></script>
+<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+<script type="text/javascript" src="http://www.highcharts.com/samples/data/usdeur.js"></script>
+<a href='#' id='CZ'>ChangeOPtions</a>
+
+    </body>
+</html>

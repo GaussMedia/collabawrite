@@ -1,0 +1,53 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://static.pureexample.com/js/flot/excanvas.min.js"></script>
+<script src="http://static.pureexample.com/js/flot/jquery.flot.min.js"></script>
+ 
+<!-- CSS -->
+<style type="text/css">
+#flotcontainer {
+    width: 600px;
+    height: 200px;
+    text-align: left;
+}
+</style>
+ 
+ 
+<!-- Javascript -->
+<script type="text/javascript">
+$(function () {    
+    var data1 = [
+        [10, 10], [20, 20], [30, 30], [40, 40], [50, 50]
+    ];
+
+    var options = {
+            series:{
+                bars:{show: true}
+            },
+            bars:{
+                horizontal:true,
+                barWidth:6
+            },
+            grid:{
+                backgroundColor: { colors: ["#919191", "#141414"] }
+            }
+    };
+
+    $.plot($("#flotcontainer"), [data1], options);  
+    
+});
+</script>
+ </head>
+    <body>
+<!-- HTML -->
+<div id="legendPlaceholder"></div>
+<div id="flotcontainer"></div>    </body>
+    </html>
